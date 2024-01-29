@@ -1,0 +1,43 @@
+<!--                     __                      ______                      -->
+<!-- .-----.-----.--.--.|  |--.-----.----.-----.|      |.-----.-----.        -->
+<!-- |  _  |__ --|  |  ||  _  |  _  |   _|  _  ||  --  ||     |  -__|        -->
+<!-- |   __|_____|___  ||_____|_____|__| |___  ||______||__|__|_____|#4689   -->
+<!-- |__|        |_____|                 |_____| BaseTemplate.html           -->
+<!--                                                                         -->
+<!-- Licensed under the terms of the LICENSE file included in this repo.     -->
+<!-- Created On   : Mo, January 15th 2024, 02:00:14                          -->
+<!-- Last Modified: Mo, January 15th 2024, 02:45:40                          -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+
+        {% load django_bootstrap5 %}
+        {% load bootstrap_icons %}
+
+        {% bootstrap_css %}
+        {% bootstrap_javascript %}
+        
+
+    </head>
+
+    <body>
+        <div class="container">
+            <ul class="nav bg-info">
+                <li class="nav-item">
+                <a class="nav-link link-light" href="/">HOME</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link link-light" href="/members">MEMBERS</a>
+                </li>
+            </ul>
+
+            {% block content %}{% endblock %}
+
+            {% block footer%}Made with a lot of {% bs_icon 'cup-hot-fill' color='green' %} and {% bs_icon 'heart-fill' color='green' %}{% endblock %}
+        </div>
+    </body>
+</html>
+
+

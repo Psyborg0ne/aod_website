@@ -1,0 +1,28 @@
+<!--                     __                      ______                      -->
+<!-- .-----.-----.--.--.|  |--.-----.----.-----.|      |.-----.-----.        -->
+<!-- |  _  |__ --|  |  ||  _  |  _  |   _|  _  ||  --  ||     |  -__|        -->
+<!-- |   __|_____|___  ||_____|_____|__| |___  ||______||__|__|_____|#4689   -->
+<!-- |__|        |_____|                 |_____| ItemTemplate.html           -->
+<!--                                                                         -->
+<!-- Licensed under the terms of the LICENSE file included in this repo.     -->
+<!-- Created On   : Mo, January 15th 2024, 02:21:00                          -->
+<!-- Last Modified: Mo, January 15th 2024, 02:47:41                          -->
+
+
+
+{% extends "wiki/BaseTemplate.html" %}
+{% block title %}
+    {{page_title}}
+{% endblock %}
+
+{% block content %}
+    <img src={{ item.icon.url }} alt="item icon">
+    <h1>{{item.name}}</h1>
+    <h2>{{item.description}}</h2>
+    <ul>
+        <li>STR: {{item.str}}</li>
+        <li>AGI: {{item.agi}}</li>
+        <li>INT: {{item.int}}</li>
+    </ul>
+   {{item.souls}}
+{% endblock %}
