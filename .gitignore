@@ -163,5 +163,5 @@ website/static/admin/*
 website/static/filer/*
 website/static/wiki/icons/*
 website/static/wiki/images/*
-website/wiki/migrations/*
+website/wiki/migrations/*.py
 website/wiki.db

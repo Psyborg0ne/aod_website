@@ -1,0 +1,33 @@
+<!--                     __                      ______                      -->
+<!-- .-----.-----.--.--.|  |--.-----.----.-----.|      |.-----.-----.        -->
+<!-- |  _  |__ --|  |  ||  _  |  _  |   _|  _  ||  --  ||     |  -__|        -->
+<!-- |   __|_____|___  ||_____|_____|__| |___  ||______||__|__|_____|#4689   -->
+<!-- |__|        |_____|                 |_____| HeroTemplate.html           -->
+<!--                                                                         -->
+<!-- Licensed under the terms of the LICENSE file included in this repo.     -->
+<!-- Created On   : Tu, January 30th 2024, 09:13:45                          -->
+<!-- Last Modified: Tu, January 30th 2024, 09:18:06                          -->
+
+
+
+{% extends "wiki/BaseTemplate.html" %}
+{% block title %}
+    {{page_title}}
+{% endblock %}
+
+{% block content %}
+    <img src={{ hero.icon.url }} alt="hero icon">
+    <h1>{{hero.name}} | {{hero.tier}}</h1>
+    <h2>{{hero.description}}</h2>
+    <img src={{ hero.image.url }} alt="hero image">
+    <ul>
+        <li>STR: {{hero.str}}</li>
+        <li>AGI: {{hero.agi}}</li>
+        <li>INT: {{hero.int}}</li>
+    </ul>
+
+    <ul>
+        <li>Damage: {{hero.dmg}}</li>
+        <li>Armor: {{hero.armor}}</li>
+    </ul>
+{% endblock %}

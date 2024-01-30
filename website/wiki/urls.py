@@ -6,14 +6,15 @@
 # 
 # Licensed under the terms of the LICENSE file included in this repo.
 # Created On   : Fr, January 12th 2024, 21:26:50
-# Last Modified: Mo, January 29th 2024, 23:25:18
+# Last Modified: Tu, January 30th 2024, 21:17:01
 
 
 
 from django.urls import path
-from wiki.views import item
+from wiki.views import item, hero
 
 # app_name = "wiki"
 urlpatterns = [
-    path("<int:item_id>/", item.item_details, name="details_item"),
+    path("item/<int:item_id>/", item.item_details, name="details_item"),
+    path("hero/<int:hero_id>/", hero.hero_details, name="details_hero"),
 ]

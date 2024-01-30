@@ -6,7 +6,7 @@
 # 
 # Licensed under the terms of the LICENSE file included in this repo.
 # Created On   : Mo, January 29th 2024, 22:20:00
-# Last Modified: Mo, January 29th 2024, 22:47:30
+# Last Modified: Tu, January 30th 2024, 20:25:33
 
 from django.db import models
 from django.contrib.auth.models import User
